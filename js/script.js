@@ -96,8 +96,9 @@ function printQuote(){
 
   getRandomColor();
 
-  setTimeout(printQuote, 25000);
 }
+
+setInterval(printQuote, 25000);
 
 //Calls printQuote function
 printQuote();
