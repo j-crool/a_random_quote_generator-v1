@@ -64,7 +64,6 @@ function getRandomColor(){
 // - creates paragraph tags for quote and source
 // - checks for citations and years and tags, then appends them to .source if they exist
 // - calls function to change bg-color
-// - re runs print quote every 25 seconds
 
 function printQuote(){
   var theQuote = getRandomQuote();
@@ -98,12 +97,9 @@ function printQuote(){
   getRandomColor();
 }
 
-//Calls printQuote function
-
-
+//Calls printQuote function on a 25 second timer
 setInterval(printQuote, 25000);
 
 
 //Tells button to generate new quote by calling printQuote function
-
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
