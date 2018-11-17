@@ -90,6 +90,10 @@ body {
   outline: none;
 }
 
+.tags{
+  float: right;
+}
+
 .tag{
   border: 1px solid #ddd;
   border-radius: 5px;

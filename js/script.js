@@ -7,7 +7,7 @@ FSJS project 1 - A Random Quote Generator
 
 
 
-
+// array of quotes that will be passed to the page
 var quotes = [
   {
     quote: "We all make choices in life, but in the end our choices make us.",
@@ -43,7 +43,7 @@ var quotes = [
 ]
 
 
-
+//This function selects a random quote from the array above
 function getRandomQuote(){
   var randomNumber = Math.floor((Math.random() * quotes.length));
   var selectedQuote = quotes[randomNumber];
@@ -51,6 +51,7 @@ function getRandomQuote(){
   return selectedQuote;
 }
 
+//This function creates three random number values that are passed to the body's background color
 function getRandomColor(){
   var R = Math.floor((Math.random() * 256));
   var G = Math.floor((Math.random() * 256));
@@ -62,7 +63,12 @@ function getRandomColor(){
 }
 
 
-
+//This function does quite a few things
+// - Takes randomly selected quote
+// - creates paragraph tags for quote and source
+// - checks for citations and years and tags, then appends them to .source if they exist
+// - calls function to change bg-color
+// - re runs print quote every 25 seconds
 function printQuote(){
   var theQuote = getRandomQuote();
   var quoteBox = document.getElementById('quote-box');
@@ -85,6 +91,7 @@ function printQuote(){
      for (var i = 0; theQuote.tags.length > i ; i++) {
         tagsListBuilder += '<span class="tag">' + theQuote.tags[i] + '</span>'; 
      }
+
   }
 
   quoteBuilder += '</p>';
@@ -96,6 +103,8 @@ function printQuote(){
   setTimeout(printQuote, 25000);
 }
 
+//Calls printQuote function
 printQuote();
 
+//Tells button to generate new quote by calling printQuote function
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
