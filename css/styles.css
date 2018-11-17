@@ -90,16 +90,16 @@ body {
   outline: none;
 }
 
-.tags{
-  float: right;
-}
-
 .tag{
+  float: right;
+  clear: left;
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 1px 10px 3px 10px;
+  padding: 8px 10px;
   margin: 0 2px;
   background-color: rgba(255,255,255, .2);
+  position: relative;
+  right: 80px;
 }
 
 @media (max-width: 420px) {

@@ -65,6 +65,7 @@ function getRandomColor(){
 // - checks for citations and years and tags, then appends them to .source if they exist
 // - calls function to change bg-color
 // - re runs print quote every 25 seconds
+
 function printQuote(){
   var theQuote = getRandomQuote();
   var quoteBox = document.getElementById('quote-box');
@@ -95,13 +96,14 @@ function printQuote(){
   quoteBox.innerHTML = quoteBuilder;
 
   getRandomColor();
-
 }
+
+//Calls printQuote function
+
 
 setInterval(printQuote, 25000);
 
-//Calls printQuote function
-printQuote();
 
 //Tells button to generate new quote by calling printQuote function
+
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
