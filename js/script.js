@@ -5,8 +5,6 @@ FSJS project 1 - A Random Quote Generator
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-
-
 // array of quotes that will be passed to the page
 var quotes = [
   {
@@ -42,7 +40,6 @@ var quotes = [
   },
 ]
 
-
 //This function selects a random quote from the array above
 function getRandomQuote(){
   var randomNumber = Math.floor((Math.random() * quotes.length));
@@ -61,7 +58,6 @@ function getRandomColor(){
 
   document.body.style.background = 'rgb(' + R + ',' + G + ',' + B + ')';
 }
-
 
 //This function does quite a few things
 // - Takes randomly selected quote
